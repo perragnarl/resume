@@ -1,16 +1,16 @@
 @font-face {
 	font-family:'Fira Mono';
-	src: url('/src/fonts/fira-mono-regular.woff2') format('woff2');
+	src: url('../fonts/fira-mono-regular.woff2') format('woff2');
 }
 
 @font-face {
 	font-family:'Fira Mono';
 	font-weight: 500;
-	src: url('/src/fonts/fira-mono-500.woff2') format('woff2');
+	src: url('../fonts/fira-mono-500.woff2') format('woff2');
 }
 
 @font-face {
 	font-family:'Fira Mono';
 	font-weight: 700;
-	src: url('/src/fonts/fira-mono-700.woff2') format('woff2');
+	src: url('../fonts/fira-mono-700.woff2') format('woff2');
 }
