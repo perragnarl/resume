@@ -1,0 +1,42 @@
+:root {
+	/* Color */
+	--color-bg--rgb: var(--default-bg);
+	--color-1--rgb: var(--default-1);
+	--color-2--rgb: var(--default-2);
+
+	--color-bg: rgb(var(--color-bg--rgb));
+	--color-1: rgb(var(--color-1--rgb));
+	--color-2: rgb(var(--color-2--rgb));
+
+	/* Font */
+	--font-primary: 'Fira Mono';
+	--font-headline: 'Fira Mono';
+
+	/* Font size */
+	--font-size-default: 1em;
+	--font-size-0: 0.9em;
+	--font-size-1: 1.4em;
+	--font-size-2: 1.8em;
+	--font-size-3: 2.6em;
+	--font-size-4: 3.4em;
+
+	/* Line height */
+	--line-height-default: 1.2em;
+	--line-height-1: 2em;
+
+	/* Width container */
+	--page-width: 60em;
+	--text-block: 60em;
+
+	/* Space */
+	--space: 12px;
+	--space-xs: calc(var(--space) / 4);
+	--space-sm: calc(var(--space) / 2);
+	--space-md: var(--space);
+	--space-lg: calc(var(--space) * 2);
+	--space-xl: calc(var(--space) * 4);
+	--space-2x: calc(var(--space) * 6);
+	--space-3x: calc(var(--space) * 8);
+	--space-4x: calc(var(--space) * 10);
+	--space-5x: calc(var(--space) * 12);
+}

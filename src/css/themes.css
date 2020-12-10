@@ -1,0 +1,51 @@
+:root {
+	--default-bg: 255, 252, 245;
+	--default-1: 48, 48, 48;
+	--default-2: 243, 129, 129;
+
+	--nord-bg: 51, 63, 84;
+	--nord-1: 238, 238, 238;
+	--nord-2: 0, 173, 181;
+
+	--forest-bg: 231, 230, 225;
+	--forest-1: 89, 87, 87;
+	--forest-2: 141, 181, 150;
+
+	--retro-bg: 255, 237, 183;
+	--retro-1: 90, 62, 44;
+	--retro-2: 116, 200, 175;
+}
+
+.nord {
+	--color-bg--rgb: var(--nord-bg);
+	--color-1--rgb: var(--nord-1);
+	--color-2--rgb: var(--nord-2);
+}
+
+.forest {
+	--color-bg--rgb: var(--forest-bg);
+	--color-1--rgb: var(--forest-1);
+	--color-2--rgb: var(--forest-2);
+}
+
+.retro {
+	--color-bg--rgb: var(--retro-bg);
+	--color-1--rgb: var(--retro-1);
+	--color-2--rgb: var(--retro-2);
+}
+
+[data-theme="default"] .color-1 { background-color: rgb(var(--default-bg)); }
+[data-theme="default"] .color-2 { background-color: rgb(var(--default-1)); }
+[data-theme="default"] .color-3 { background-color: rgb(var(--default-2)); }
+
+[data-theme="nord"] .color-1 { background-color: rgb(var(--nord-bg)); }
+[data-theme="nord"] .color-2 { background-color: rgb(var(--nord-1)); }
+[data-theme="nord"] .color-3 { background-color: rgb(var(--nord-2)); }
+
+[data-theme="forest"] .color-1 { background-color: rgb(var(--forest-bg)); }
+[data-theme="forest"] .color-2 { background-color: rgb(var(--forest-1)); }
+[data-theme="forest"] .color-3 { background-color: rgb(var(--forest-2)); }
+
+[data-theme="retro"] .color-1 { background-color: rgb(var(--retro-bg)); }
+[data-theme="retro"] .color-2 { background-color: rgb(var(--retro-1)); }
+[data-theme="retro"] .color-3 { background-color: rgb(var(--retro-2)); }

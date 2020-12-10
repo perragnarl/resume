@@ -1,0 +1,13 @@
+.layout__section {
+	margin-top: var(--space-2x);
+}
+@media screen and (min-width: 800px) {
+	.layout__section {
+		margin-top: var(--space-5x);
+	}
+}
+.layout__section--compound {
+	max-width: var(--text-block);
+	margin-left: auto;
+	margin-right: auto;
+}
