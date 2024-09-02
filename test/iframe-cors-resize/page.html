@@ -493,6 +493,9 @@
 				childList: true,
 				subtree: true,
 			});
+
+			// Send height on window resize
+			window.addEventListener("resize", sendHeight);
 		</script>
 	</body>
 </html>
