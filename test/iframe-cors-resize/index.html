@@ -82,8 +82,9 @@
 				}, 100); // Delay of 100ms
 			}
 
-			// Send height on load
+			// Send height on load and pageshow
 			window.addEventListener("load", sendHeight);
+			window.addEventListener("pageshow", sendHeight);
 
 			// Send height on content changes
 			const observer = new MutationObserver(sendHeight);
