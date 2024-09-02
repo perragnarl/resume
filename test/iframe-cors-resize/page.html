@@ -476,11 +476,16 @@
 		</div>
 		<script>
 			function sendHeight() {
-				const height =
-					document.documentElement.scrollHeight ||
-					document.body.scrollHeight;
-				console.log("Sending height", height);
-				window.parent.postMessage({ type: "setHeight", height }, "*");
+				setTimeout(() => {
+					const height =
+						document.documentElement.scrollHeight ||
+						document.body.scrollHeight;
+					console.log("Sending height", height);
+					window.parent.postMessage(
+						{ type: "setHeight", height },
+						"*"
+					);
+				}, 100); // Delay of 100ms
 			}
 
 			// Send height on load
