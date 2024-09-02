@@ -64,6 +64,24 @@
         officia elit elit amet sunt incididunt consectetur ullamco sunt.
       </p>
     </div>
-    <script src="iframe-resizer.child.js"></script>
+	<script>
+		function sendHeight() {
+			const height =
+				document.documentElement.scrollHeight ||
+				document.body.scrollHeight;
+			window.parent.postMessage({ type: "setHeight", height }, "*");
+		}
+
+		// Send height on load
+		window.addEventListener("load", sendHeight);
+
+		// Send height on content changes
+		const observer = new MutationObserver(sendHeight);
+		observer.observe(document.body, {
+			attributes: true,
+			childList: true,
+			subtree: true,
+		});
+	</script>
   </body>
 </html>
