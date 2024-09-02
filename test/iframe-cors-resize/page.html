@@ -476,32 +476,21 @@
 		</div>
 		<script>
 			function sendHeight() {
-				setTimeout(() => {
-					const height =
-						document.documentElement.scrollHeight ||
-						document.body.scrollHeight;
-					console.log("Sending page height", height);
-					window.parent.postMessage(
-						{ type: "setHeight", height },
-						"*"
-					);
-				}, 100); // Delay of 100ms
+				const height = document.body.offsetHeight;
+				console.log("Sending page height", height);
+				window.parent.postMessage({ type: "setHeight", height }, "*");
 			}
 
-			// Send height on load and pageshow
 			window.addEventListener("load", sendHeight);
 			window.addEventListener("pageshow", sendHeight);
+			window.addEventListener("resize", sendHeight);
 
-			// Send height on content changes
 			const observer = new MutationObserver(sendHeight);
 			observer.observe(document.body, {
 				attributes: true,
 				childList: true,
 				subtree: true,
 			});
-
-			// Send height on window resize
-			window.addEventListener("resize", sendHeight);
 		</script>
 	</body>
 </html>
