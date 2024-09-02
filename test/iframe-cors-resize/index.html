@@ -69,6 +69,8 @@
 			const height =
 				document.documentElement.scrollHeight ||
 				document.body.scrollHeight;
+			console.log("Sending height", height);
+
 			window.parent.postMessage({ type: "setHeight", height }, "*");
 		}
 
