@@ -68,23 +68,6 @@
 				sunt incididunt consectetur ullamco sunt.
 			</p>
 		</div>
-		<script>
-			function sendHeight() {
-				const height = document.body.offsetHeight;
-				console.log("Sending page height", height);
-				window.parent.postMessage({ type: "setHeight", height }, "*");
-			}
-
-			window.addEventListener("load", sendHeight);
-			window.addEventListener("pageshow", sendHeight);
-			window.addEventListener("resize", sendHeight);
-
-			const observer = new MutationObserver(sendHeight);
-			observer.observe(document.body, {
-				attributes: true,
-				childList: true,
-				subtree: true,
-			});
-		</script>
+		<script src="https://localhost:5002/iframe-resizer/iframe-resizer.js"></script>
 	</body>
 </html>
